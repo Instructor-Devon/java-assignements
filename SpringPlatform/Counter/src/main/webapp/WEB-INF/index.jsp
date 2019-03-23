@@ -9,6 +9,6 @@
 </head>
 <body>
 	<h1>Counter App</h1>
-	<a href="/counter">Vistit Counter Results</a>
+	<a href="/counter">Visit Counter Results</a>
 </body>
 </html>
