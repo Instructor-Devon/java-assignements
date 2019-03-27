@@ -21,7 +21,14 @@ public class ApiService {
 		return studentRepo.findAll();
 	}
 	public void createContact(Contact contact) {
-		contactRepo.save(contact);
+		Student existing = contact.getStudent();
+		if(existing == null)
+			contactRepo.save(contact);
+//		else {
+//			
+//		}
+//			// just update the contact
+//			contactRepo.save(contact);
 	}
 	public void createStudent(Student student) {
 		studentRepo.save(student);
