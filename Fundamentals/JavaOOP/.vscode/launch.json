@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - HumanTest",
+            "request": "launch",
+            "mainClass": "HumanTest",
+            "projectName": "JavaOOP_fe5fd395"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LOL",
             "request": "launch",
             "mainClass": "LOL"
