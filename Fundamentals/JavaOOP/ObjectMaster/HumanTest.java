@@ -3,6 +3,8 @@ public class HumanTest {
         Human h1 = new Human();
         Human h2 = new Human();
 
-        h1.attack(h2);
+        Samurai s = new Samurai();
+
+        s.attack(h2);
     }
 }
