@@ -1,3 +1,4 @@
+package SinglyLinkedList;
 public class SLLNode<T> {
     public T value;
     public SLLNode<T> next;

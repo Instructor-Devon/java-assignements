@@ -2,16 +2,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - HumanTest",
+            "name": "CodeLens (Launch) - SLLTester",
             "request": "launch",
-            "mainClass": "HumanTest",
+            "mainClass": "SinglyLinkedList.SLLTester",
             "projectName": "JavaOOP_fe5fd395"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - LOL",
-            "request": "launch",
-            "mainClass": "LOL"
         }
     ]
 }

@@ -1,3 +1,4 @@
+package SinglyLinkedList;
 public class SinglyLinkedList<T> {
     private SLLNode<T> head;
     public SinglyLinkedList() {
@@ -54,13 +55,29 @@ public class SinglyLinkedList<T> {
         String s = String.format("Node Value: %s :: Next Value: null", runner.value);
         System.out.println(s);
     }
-    public static void Tester() {
-        SinglyLinkedList<int[]> sll = new SinglyLinkedList<int[]>();
+
+    public T removeBack() {
+        SLLNode<T> runner = head;
+        T valToReturn;
+
+        // if we have 0 nodes return null
+        if(IsEmpty())
+            return null;
+
+        // if we have just one node, remove head
+        if(head.next == null) {
+            valToReturn = head.value;
+            head = null;
+            return valToReturn;
+        }
+
+        // otherwise, loop til we are right before the last node
+        while(runner.next.next != null) {
+            runner = runner.next;
+        }
+        valToReturn = runner.next.value;
+        runner.next = null;
+        return valToReturn;
         
-        sll.AddFront(new int[]{1,2,3});
-        sll.AddFront(new int[]{5,6,8});
-        sll.DisplayValues();
-        System.out.println(sll.Contains(new int[]{1,2,3}));
-        System.out.println(sll.Contains(new int[]{3,2,5}));
     }
 }
