@@ -23,7 +23,7 @@
 			</thead>
 			<c:forEach items="${ questions }" var="question">
 				<tr>
-					<td>${ question.question}</td>
+					<td><a href="/${ question.id }">${ question.question}</a></td>
 					<td>
 					<c:forEach items="${ question.tags }" var="tag">
 						<span>${ tag.subject }<c:if test="${ question.tags.indexOf(tag) != question.tags.size() - 1 }">, </c:if></span>

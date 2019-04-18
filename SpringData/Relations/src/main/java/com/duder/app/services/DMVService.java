@@ -23,6 +23,9 @@ public class DMVService {
 	public List<Person> getPeople() {
 		return personRepo.findAll();
 	}
+	public List<Person> getUnlicensedPeople() {
+		return personRepo.findByLicenseIdIsNull();
+	}
 	public Person createPerson(Person p) {
 		return personRepo.save(p);
 	}

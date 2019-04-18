@@ -33,7 +33,10 @@ public class Tag {
 	private List<Question> questions;
 	
 	public Tag() {
-		
+	}
+
+	public Tag(String subject) {
+		this.subject = subject;
 	}
 	
 	public Long getId() {

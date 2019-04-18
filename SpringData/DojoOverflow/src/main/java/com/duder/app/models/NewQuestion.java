@@ -1,12 +1,13 @@
 package com.duder.app.models;
 
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 public class NewQuestion {
-	@Size(min=3, message="Question field is required")
+	@NotBlank()
 	private String question;
+	@Pattern(regexp="^(([a-zA-Z\\s])+$|([a-zA-Z\\s]+,)[a-zA-Z\\s]+){1,2}$",message="Tags must be separated by commas, max 3")
 	private String tags;
 	public String getQuestion() {
 		return question;

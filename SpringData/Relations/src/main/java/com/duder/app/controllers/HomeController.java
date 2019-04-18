@@ -39,7 +39,8 @@ public class HomeController {
 	}
 	@RequestMapping("/licenses/new")
 	public String NewLicense(@ModelAttribute("license") License lic, Model model) {
-		model.addAttribute("persons", service.getPeople());
+		List<Person> unlicensed = service.getUnlicensedPeople();
+		model.addAttribute("persons", unlicensed);
 		return "/licenses/new.jsp";
 	}
 	@RequestMapping(value = "/licenses", method=RequestMethod.POST)
